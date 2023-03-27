@@ -1,12 +1,10 @@
 <?php
-include('Symbols.php');
+include('GameRun.php');
+include('Player.php');
 
-$symbols = new Symbols();
+$player = new Player();
+$player->Register();
 
-do{
-    $symbols->FunRoulette();
-    $symbols->SymbolsRandomize();
-    $push = readline();
-    system('clear');
-} while (!is_numeric($push));
+$gameRun = new GameRun($player);
+$gameRun->SpinRoulette();
 ?>
