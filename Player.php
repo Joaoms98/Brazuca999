@@ -29,7 +29,8 @@ class Player
             $this->Balance = $this->Balance - $cash;
         }
         else{
-            echo "Seu saldo foi liquidado, você está fálido";
+            echo "                 Seu saldo foi liquidado, você está fálido\n";
+            exit;
         }
     }
     
@@ -50,7 +51,7 @@ class Player
             
             if($age < 18)
             {
-                echo("Você precisa ser maior que 18 anos!"."\n");
+                echo("Você precisa ser maior de 18 anos!"."\n");
             }
 
         }while($age < 18);
@@ -58,4 +59,3 @@ class Player
         return true;
     }
 }
-?>

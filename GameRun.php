@@ -47,7 +47,7 @@ class GameRun
         {
             $randomInt = rand(0, 5);
             $result[] = $this->Symbols[$randomInt]." ";
-            echo $result[$i];
+            echo "                 ".$result[$i];
 
             if($i == 2)
             {
@@ -63,14 +63,13 @@ class GameRun
 
         if($result[0] == $result[1] & $result[1] == $result[2])
         {
-            $this->player->WinCash(500);
-            echo "Você Ganhou! Estamos adicionando 500$ em sua conta! Seu Saldo é de: " .$this->player->Balance."$";
+            $this->player->WinCash(1000);
+            echo "        Você Ganhou! Estamos adicionando 1000$ em sua conta! Seu Saldo é de: " .$this->player->Balance."$";
         }
         else
         {
             $this->player->LoseCash(50);
-            echo "Você Perdeu! Estamos Retirando 50$ de sua conta! Seu Saldo é de: " .$this->player->Balance."$";
+            echo "        Você Perdeu! Estamos Retirando 50$ de sua conta! Seu Saldo é de: " .$this->player->Balance."$";
         }
     }
 }
-?>
